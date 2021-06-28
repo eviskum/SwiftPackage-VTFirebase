@@ -137,15 +137,15 @@ public class FBViewModel: ObservableObject {
                 
                 print("User signed in \(anonymous)with user ID \(user.uid). Email: \(user.email ?? "(empty)"), display name: [\(user.displayName ?? "(empty)")]")
                 
-                FBFirestore.retrieveFBUser(uid: user.uid) { (result) in
-                    switch result {
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    case .success(let fbUser):
-                        print("FBUser retrieved")
-                        self.fbUser = fbUser
-                    }
-                }
+//                FBFirestore.retrieveFBUser(uid: user.uid) { (result) in
+//                    switch result {
+//                    case .failure(let error):
+//                        print(error.localizedDescription)
+//                    case .success(let fbUser):
+//                        print("FBUser retrieved")
+//                        self.fbUser = fbUser
+//                    }
+//                }
             }
             else {
                 self.isUserAuthenticated = .signedOut
